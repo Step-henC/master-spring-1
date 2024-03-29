@@ -1,0 +1,16 @@
+version: '3.3'
+services: 
+   mysql:
+    image: mysql:8-oracle
+    container_name: social-db
+    restart: always
+    environment:
+      MYSQL_ROOT: 'thisroot'
+      MYSQL_ROOT_PASSWORD: 'thispassword'
+      MYSQL_PASSWORD: 'thispassword'
+      MYSQL_DATABASE: 'social-media-database'
+      MYSQL_USER: 'social-media-user'
+    ports:
+     - '3306:3306'
+
+            #docker exec -it social-db bash
